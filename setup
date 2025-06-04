@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# READ BEFORE EXECUTING:
+# Make sure that you know what you're doing when executing this file
+
+if ! command -v php &> /dev/null; then
+    echo Installing PHP and Composer
+    # /bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.4)"
+fi
+
+read -rsp $'Check if the PHP ini file is with the proper fields uncommented.\nPress enter to continue...\n'
+
+# echo Installing Laravel
+# composer global require laravel/installer
+
+# echo Installing vendor
+composer install
+
+# echo Generating the .env file
+cp .env.example .env
+php artisan key:generate
+
+# echo Migrating/Populating the Database
+php artisan migrate
+
+# echo Dealing with Node (installing dependencies and building the application)
+npm install && npm run build
+
+# echo Running the application
+composer run dev
+
+# =================
+
+composer require laravel/breeze --dev
+
+php artisan breeze:install
