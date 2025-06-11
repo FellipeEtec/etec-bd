@@ -87,7 +87,7 @@
                     @if (Route::has('login'))
                         @auth
                             <li class="bg-red-700 hover:text-red-700 hover:bg-white">
-                                <a href="{{ route('/dashboard') }}" class="block px-5 py-3">
+                                <a href="{{ route('dashboard') }}" class="block px-5 py-3">
                                     Dashboard
                                 </a>
                             </li>
