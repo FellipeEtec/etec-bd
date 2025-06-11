@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('etec.layouts.default')
 
 @section('title')
 Contato | Etec da Zona Leste

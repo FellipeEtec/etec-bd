@@ -2,34 +2,34 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\IndexController;
+use App\Http\Controllers\RouteController;
 
 // Page's routes
 
 Route::get(
     '/',
-    [IndexController::class, 'index']
+    [RouteController::class, 'index']
 )->name('index');
 
 Route::get(
     '/cursos',
-    [IndexController::class, 'courses']
+    [RouteController::class, 'courses']
 )->name('courses');
 
 Route::get(
     '/departamentos',
-    [IndexController::class, 'departments']
+    [RouteController::class, 'departments']
 )->name('departments');
 
 Route::get(
     '/contato',
-    [IndexController::class, 'contact']
+    [RouteController::class, 'contact']
 )->name('contact');
 
 // Redirects
 
 Route::get('/home', function () {
-    return redirect()->action([IndexController::class, 'index']);
+    return redirect()->action([RouteController::class, 'index']);
 });
 
 

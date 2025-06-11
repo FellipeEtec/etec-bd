@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('etec.layouts.default')
 
 @section('title')
 Cursos | Etec da Zona Leste

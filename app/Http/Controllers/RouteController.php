@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Vite;
 
 
-class IndexController extends Controller {
+class RouteController extends Controller {
     public static function index() {
         return view("etec.index", ['destaques' => [
             [

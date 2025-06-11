@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('etec.layouts.default')
 
 @section('title')
 Etec da Zona Leste

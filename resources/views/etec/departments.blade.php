@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('etec.layouts.default')
 
 @section('title')
 Departamentos | Etec da Zona Leste

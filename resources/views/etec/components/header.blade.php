@@ -84,6 +84,29 @@
                             Contato
                         </a>
                     </li>
+                    @if (Route::has('login'))
+                        @auth
+                            <li class="bg-red-700 hover:text-red-700 hover:bg-white">
+                                <a href="{{ route('/dashboard') }}" class="block px-5 py-3">
+                                    Dashboard
+                                </a>
+                            </li>
+                        @else
+                            <li class="bg-red-700 hover:text-red-700 hover:bg-white">
+                                <a href="{{ route('login') }}" class="block px-5 py-3">
+                                Log in
+                                </a>
+                            </li>
+
+                            @if (Route::has('register'))
+                                <li class="bg-red-700 hover:text-red-700 hover:bg-white">
+                                    <a href="{{ route('register') }}" class="block px-5 py-3">
+                                        Register
+                                    </a>
+                                </li>
+                            @endif
+                        @endauth
+                    @endif
                 </ul>
             </nav>
 
